@@ -12,7 +12,6 @@ const Pagar = () => {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
   let uri = "https://hololivfans-project-api.herokuapp.com/api/pago/create";
-  let uriLocal = "http://localhost:4000/api/pago/create";
 
   const getPayment = async () => {
     setLoading(true);

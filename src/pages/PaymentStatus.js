@@ -12,7 +12,6 @@ const PaymentStatus = () => {
   const [loading, setLoading] = useState(true);
 
   let uri = "https://hololivfans-project-api.herokuapp.com/api/pago/status/";
-  let uriLocal = "http://localhost:4000/api/pago/status/";
 
   const getStatus = async () => {
     setLoading(true);
