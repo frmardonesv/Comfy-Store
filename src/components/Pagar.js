@@ -5,28 +5,25 @@ import { useCartContext } from "../context/cart_context";
 import { useUserContext } from "../context/user_context";
 import { formatPrice } from "../utils/helpers";
 
-const StripeCheckout = () => {
+const Pagar = () => {
   const { myUser } = useUserContext();
   const { total_amount, shipping_fee, cart } = useCartContext();
   const [data, setData] = useState({});
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
-
-  console.log(myUser);
+  let uri = "https://hololivfans-project-api.herokuapp.com/api/pago/create";
+  let uriLocal = "http://localhost:4000/api/pago/create";
 
   const getPayment = async () => {
     setLoading(true);
     let amount = total_amount + shipping_fee;
     let sessionId = myUser.sub;
     try {
-      const res = await axios.post(
-        "https://hololivfans-project-api.herokuapp.com/api/pago/create",
-        {
-          cart,
-          amount,
-          sessionId,
-        }
-      );
+      const res = await axios.post(uri, {
+        cart,
+        amount,
+        sessionId,
+      });
 
       setData({
         ...data,
@@ -133,4 +130,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default StripeCheckout;
+export default Pagar;

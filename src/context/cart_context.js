@@ -59,7 +59,7 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
-// make sure use
+
 export const useCartContext = () => {
   return useContext(CartContext);
 };

@@ -11,12 +11,13 @@ const PaymentStatus = () => {
   const tokn = JSON.parse(localStorage.getItem("tok"));
   const [loading, setLoading] = useState(true);
 
+  let uri = "https://hololivfans-project-api.herokuapp.com/api/pago/status/";
+  let uriLocal = "http://localhost:4000/api/pago/status/";
+
   const getStatus = async () => {
     setLoading(true);
     try {
-      const res = await axios.post(
-        `https://hololivfans-project-api.herokuapp.com/api/pago/status/${tokn}`
-      );
+      const res = await axios.post(`${uri}${tokn}`);
       setStatus(res.data);
       localStorage.removeItem("tok");
 

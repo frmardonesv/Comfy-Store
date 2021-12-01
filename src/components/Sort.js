@@ -34,7 +34,7 @@ const Sort = () => {
       <p>{products.length} productos encontrados</p>
       <hr />
       <form>
-        <label htmlFor="sort">Sort by</label>
+        <label htmlFor="sort">Filtrar por</label>
         <select
           name="sort"
           id="sort"

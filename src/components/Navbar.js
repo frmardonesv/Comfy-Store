@@ -16,7 +16,7 @@ const Nav = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <img src={logo} alt="logo" />
+            <h2 className="navbar-logo">StoreStorm</h2>
           </Link>
           <button type="button" className="nav-toggle">
             <FaBars onClick={openSidebar} />
@@ -58,6 +58,11 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    .navbar-logo {
+      color: var(--clr-grey-1);
+      font-size: 1.4rem;
+      margin: 0;
+    }
     img {
       width: 175px;
       margin-left: -15px;

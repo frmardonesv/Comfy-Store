@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { PageHero, StripeCheckout } from "../components";
-// extra imports
+import { PageHero, Pagar } from "../components";
 import { useCartContext } from "../context/cart_context";
 import { Link } from "react-router-dom";
 
@@ -19,7 +18,7 @@ const CheckoutPage = () => {
             </Link>
           </div>
         ) : (
-          <StripeCheckout />
+          <Pagar />
         )}
       </Wrapper>
     </main>

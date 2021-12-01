@@ -99,7 +99,7 @@ export const FilterProvider = ({ children }) => {
     </FilterContext.Provider>
   );
 };
-// make sure use
+
 export const useFilterContext = () => {
   return useContext(FilterContext);
 };
